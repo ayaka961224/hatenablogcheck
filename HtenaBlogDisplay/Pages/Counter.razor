@@ -1,0 +1,82 @@
+﻿@page "/counter"
+@using System.Text
+@using Newtonsoft.Json
+@inject HttpClient Http
+
+<h1>今週の人気記事</h1>
+
+
+<p>
+    <ul>
+        <li><a href="@URL0">@Title0</a></li>
+        <li><a href="@URL1">@Title1</a></li>
+        <li><a href="@URL2">@Title2</a></li>
+        <li><a href="@URL3">@Title3</a></li>
+        <li><a href="@URL4">@Title4</a></li>
+        <li><a href="@URL5">@Title5</a></li>
+        <li><a href="@URL6">@Title6</a></li>
+        <li><a href="@URL7">@Title7</a></li>
+
+
+
+    </ul>
+</p>
+
+@code {
+    public string BlogData { get; set; }
+    public string Title0 { get; set; }
+    public string Title1 { get; set; }
+    public string Title2 { get; set; }
+    public string Title3 { get; set; }
+    public string Title4 { get; set; }
+    public string Title5 { get; set; }
+    public string Title6 { get; set; }
+    public string Title7 { get; set; }
+    public string URL0 { get; set; }
+    public string URL1 { get; set; }
+    public string URL2 { get; set; }
+    public string URL3 { get; set; }
+    public string URL4 { get; set; }
+    public string URL5 { get; set; }
+    public string URL6 { get; set; }
+    public string URL7 { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await Http.GetAsync(@"https://hatenabloghundredusers20200702223442.azurewebsites.net/api/HundredUsersTechnology");
+
+        var jsonData=response.IsSuccessStatusCode ?
+            await response.Content.ReadAsStringAsync() :
+            "Failed";
+
+        RssInfo rssInfo = JsonConvert.DeserializeObject<RssInfo>(jsonData);
+
+        URL0 = rssInfo.UrlList[0];
+        URL1 = rssInfo.UrlList[1];
+        URL2 = rssInfo.UrlList[2];
+        URL3 = rssInfo.UrlList[3];
+        URL4 = rssInfo.UrlList[4];
+        URL5 = rssInfo.UrlList[5];
+        URL6 = rssInfo.UrlList[6];
+        URL7 = rssInfo.UrlList[7];
+
+        Title0 = rssInfo.TitleList[0];
+        Title1 = rssInfo.TitleList[1];
+        Title2 = rssInfo.TitleList[2];
+        Title3 = rssInfo.TitleList[3];
+        Title4 = rssInfo.TitleList[4];
+        Title5 = rssInfo.TitleList[5];
+        Title6 = rssInfo.TitleList[6];
+        Title7 = rssInfo.TitleList[7];
+
+
+        var stringBuilder = new StringBuilder();
+        for (int i = 0; i < rssInfo.TitleList.Count; i++)
+        {
+            stringBuilder.Append(rssInfo.TitleList[i]);
+            stringBuilder.Append(" ");
+            stringBuilder.Append(rssInfo.UrlList[i]);
+            stringBuilder.Append(Environment.NewLine);
+        }
+    }
+}
