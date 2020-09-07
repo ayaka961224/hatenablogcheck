@@ -1498,11 +1498,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\work\\Git_Private\\Designpattern\\docs\\バックアップ\\WebApp\\HtenaBlogDisplay\\HtenaBlogDisplay.csproj",
+      "projectUniqueName": "C:\\work\\Git_Private\\hatenablogcheck\\HtenaBlogDisplay\\HtenaBlogDisplay.csproj",
       "projectName": "HtenaBlogDisplay",
-      "projectPath": "C:\\work\\Git_Private\\Designpattern\\docs\\バックアップ\\WebApp\\HtenaBlogDisplay\\HtenaBlogDisplay.csproj",
+      "projectPath": "C:\\work\\Git_Private\\hatenablogcheck\\HtenaBlogDisplay\\HtenaBlogDisplay.csproj",
       "packagesPath": "C:\\Users\\ayk12\\.nuget\\packages\\",
-      "outputPath": "C:\\work\\Git_Private\\Designpattern\\docs\\バックアップ\\WebApp\\HtenaBlogDisplay\\obj\\",
+      "outputPath": "C:\\work\\Git_Private\\hatenablogcheck\\HtenaBlogDisplay\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

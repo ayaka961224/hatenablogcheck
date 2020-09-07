@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "HtenaBlogDisplay.dll": "sha256-1McwGYVb5jYXiXmSpB4UFtzwD5Um6Yianbel18FUans=",
+      "HtenaBlogDisplay.dll": "sha256-kEfKOmWF9qo024sO0uWbycQzv9akyHsGRMPFn1ITdaQ=",
       "System.Net.Http.Json.dll": "sha256-99dseBOagY3mzu5Y8Eqm8gRI+o8QbbCp7R2Ew9bQ+5E=",
       "System.Buffers.dll": "sha256-ZxXy75PYbzJxNfAc\/SAP1nUYm4gt1jSaOpFnBb9m85M=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -61,7 +61,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-dwm+rKImjhxtOmHHVpSxOgl2oh2R26xOWihLaZSv7Vs="
     },
     "pdb": {
-      "HtenaBlogDisplay.pdb": "sha256-bVF3ERJrpMYrxXp3M\/HgL6LQWtxndVLe0YGybq5RKVA="
+      "HtenaBlogDisplay.pdb": "sha256-Un+05jblV26U7YFzZzMkWl4kjb5HF959XmbkBOqGy4o="
     },
     "runtime": {
       "dotnet.3.2.0.js": "sha256-mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=",
